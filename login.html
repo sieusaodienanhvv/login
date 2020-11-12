@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="login.css">
+    <script type="text/javascript">
+        function getinfo(){
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            if (username == ""){
+                document.getElementById("error1").innerHTML = "vui lòng nhập lại tên đăng nhập";
+            }
+            else{
+                document.getElementById("error1").innerHTML = ""; 
+            }
+            if (password == ""){
+                document.getElementById("error2").innerHTML = "vui lòng nhập lại mật khẩu";
+            }
+            else{
+                document.getElementById("error2").innerHTML ="";
+            }
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <form  action="">
+            <img src="UTC21.png">
+            <h1><p class="login1">Đăng nhập</p></h1>
+            <div >
+                <center>
+                    <table>
+                        <tr>
+                            <td>
+                                <i class="fas fa-user"></i>                        
+                            </td>
+                            <td>
+                                <input type="text" placeholder="Tên đăng nhập" id="username" value="" >
+                                <br>
+                                <span id="error1"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fas fa-lock"></i>
+                            </td>
+                            <td>
+                                <input type="password" placeholder="Mật khẩu" id="password" value="">
+                                <br>
+                                <span id="error2"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="checkboxx">
+                                <input type="checkbox">
+                                <label for="">Ghi nhớ tài khoản</label>
+                                <div class="quenmatkhau">
+                                    <a href="forgotpassword.html" style="text-decoration: none;"><span>Quên mật khẩu?</span></a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <button onclick="getinfo();return false;">Đăng nhập</button>
+                            </td>
+                        </tr>
+                    </table>
+                </center>
+            </div>
+        </form>
+    </center>
+</body>
+</html>
